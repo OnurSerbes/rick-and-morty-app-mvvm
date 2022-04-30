@@ -12,13 +12,12 @@ class ViewModel (private val repository: Repository): ViewModel() {
 
     var myResponse = MutableLiveData<List<Character>>()
 
-    fun getCharacters(page: Int) {
+    fun getCharacterList(page: Int) {
         viewModelScope.launch{
             val response = repository.getCharacterList(page)
             myResponse.value = response.result
         }
     }
-
 
     fun getCharacterByName(name: String){
         viewModelScope.launch{

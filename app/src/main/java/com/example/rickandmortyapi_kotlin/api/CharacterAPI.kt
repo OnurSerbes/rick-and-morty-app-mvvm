@@ -1,4 +1,4 @@
-package com.example.rickandmortyapp.api
+package com.example.rickandmortyapi_kotlin.api
 
 import com.example.rickandmortyapi_kotlin.model.CharacterList
 import retrofit2.http.GET
@@ -9,10 +9,12 @@ interface CharacterAPI {
     //query for all characters
     @GET("api/character")
     suspend fun getCharactersList(
-        @Query("page") page: Int
+        @Query("page") page : Int
     ): CharacterList
 
     //query by name filter
     @GET("api/character")
-    suspend fun getCharactersByName(@Query("name") name : String): CharacterList
+    suspend fun getCharactersByName(
+        @Query("name") name : String
+    ): CharacterList
 }

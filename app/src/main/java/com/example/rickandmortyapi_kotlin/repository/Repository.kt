@@ -1,6 +1,6 @@
 package com.example.rickandmortyapi_kotlin.repository
 
-import com.example.rickandmortyapp.api.RetrofitInstance
+import com.example.rickandmortyapi_kotlin.api.RetrofitInstance
 import com.example.rickandmortyapi_kotlin.model.CharacterList
 
 class Repository {

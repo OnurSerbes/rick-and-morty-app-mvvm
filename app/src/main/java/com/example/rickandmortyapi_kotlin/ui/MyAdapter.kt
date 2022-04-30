@@ -1,5 +1,6 @@
 package com.example.rickandmortyapi_kotlin.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,11 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.ViewHolder>()  {
 
     override fun getItemCount(): Int {
         return characterList.size
+    }
+
+    fun setCharacters(character: List<Character>){
+        characterList = character
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)

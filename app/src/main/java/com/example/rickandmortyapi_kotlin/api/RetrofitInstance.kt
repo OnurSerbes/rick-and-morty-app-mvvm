@@ -1,4 +1,4 @@
-package com.example.rickandmortyapp.api
+package com.example.rickandmortyapi_kotlin.api
 
 import com.example.rickandmortyapi_kotlin.utils.Constants.Companion.BASE_URL
 import retrofit2.Retrofit
