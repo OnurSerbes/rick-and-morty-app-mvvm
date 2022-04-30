@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rickandmortyapp.model.Character
+import com.example.rickandmortyapi_kotlin.model.Character
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_item.view.*
 

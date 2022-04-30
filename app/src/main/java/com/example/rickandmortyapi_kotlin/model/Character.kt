@@ -1,4 +1,4 @@
-package com.example.rickandmortyapp.model
+package com.example.rickandmortyapi_kotlin.model
 
 import android.os.Parcelable
 import com.example.rickandmortyapi_kotlin.model.Location

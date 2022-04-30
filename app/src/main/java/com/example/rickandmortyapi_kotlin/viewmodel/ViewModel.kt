@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.rickandmortyapi_kotlin.repository.Repository
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.rickandmortyapp.model.Character
+import com.example.rickandmortyapi_kotlin.model.Character
 import kotlinx.coroutines.launch
 
 class ViewModel (private val repository: Repository): ViewModel() {
