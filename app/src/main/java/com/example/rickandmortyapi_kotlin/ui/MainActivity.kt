@@ -1,10 +1,9 @@
-package com.example.rickandmortyapi_kotlin
+package com.example.rickandmortyapi_kotlin.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.rickandmortyapi_kotlin.R
 
 class MainActivity : AppCompatActivity() {
 
