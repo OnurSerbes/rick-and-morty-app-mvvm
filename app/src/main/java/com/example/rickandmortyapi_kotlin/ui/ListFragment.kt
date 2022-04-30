@@ -56,7 +56,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     override fun onAttach(context: Context) {
         Log.d(TAG, "onAttach: starts")
         super.onAttach(context)
-        viewModel.getCharacterList(1)
+        viewModel.getCharacterList(2)
         Log.d(TAG, "onAttach: ends")
     }
 }
