@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/my_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/list_fragment">
 
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="com.example.rickandmortyapi_kotlin.ListFragment"
+        android:label="fragment_list_fragment"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_list_fragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.rickandmortyapi_kotlin.CardFragment"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" >
+        <action
+            android:id="@+id/action_cardFragment_to_list_fragment"
+            app:destination="@id/list_fragment" />
+    </fragment>
 </navigation>
