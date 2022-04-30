@@ -16,7 +16,6 @@ import com.example.rickandmortyapi_kotlin.repository.Repository
 import com.example.rickandmortyapi_kotlin.viewmodel.ViewModel
 import com.example.rickandmortyapi_kotlin.viewmodel.ViewModelFactory
 import kotlinx.android.synthetic.main.fragment_list.*
-import kotlinx.android.synthetic.main.fragment_list.view.*
 
 
 class ListFragment : Fragment(R.layout.fragment_list) {
@@ -28,6 +27,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         super.onViewCreated(view, savedInstanceState)
 
         setupRecyclerView()
+        //TODO the problem is in the setupObserver() fix it
         setupObserver()
 
     }
@@ -45,7 +45,8 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         Log.d(TAG, "setupObserver: starts")
         //this code block will add the characters from api to the recyclerView
         viewModel.myResponse.observe(viewLifecycleOwner) {
-            myAdapter.setCharacters(it)
+//            myAdapter.setCharacters(it)
+            it?.let { nonNull -> myAdapter.setCharacters(nonNull) }
             Log.d(TAG, "my response $it ")
         }
         Log.d(TAG, "setupObserver: ends")
@@ -57,6 +58,4 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         viewModel.getCharacterList(1)
         Log.d(TAG, "onAttach: ends")
     }
-
-
 }

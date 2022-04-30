@@ -10,6 +10,7 @@ import com.example.rickandmortyapi_kotlin.model.Character
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_item.view.*
 
+
 class MyAdapter: RecyclerView.Adapter<MyAdapter.ViewHolder>()  {
 
     private var characterList = emptyList<Character>() //TODO try listOf instead of emptyList
