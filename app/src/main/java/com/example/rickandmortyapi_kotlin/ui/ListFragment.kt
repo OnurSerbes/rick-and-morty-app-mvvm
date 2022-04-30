@@ -19,21 +19,10 @@ import kotlinx.android.synthetic.main.fragment_list.*
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(R.layout.fragment_list) {
 
     private val viewModel: ViewModel by activityViewModels{ViewModelFactory(Repository())} //it will implement the viewModel
     var myAdapter = MyAdapter()
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_list, container, false)
-
-        return view
-
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -43,25 +32,31 @@ class ListFragment : Fragment() {
 
     }
 
-
     private fun setupRecyclerView() {
+        Log.d(TAG, "setupRecyclerView: start")
         //my layout will include two column to show recyclerView items
         recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.adapter = myAdapter
+        Log.d(TAG, "setupRecyclerView: ends")
 
     }
 
     private fun setupObserver() {
+        Log.d(TAG, "setupObserver: starts")
         //this code block will add the characters from api to the recyclerView
         viewModel.myResponse.observe(viewLifecycleOwner) {
             myAdapter.setCharacters(it)
             Log.d(TAG, "my response $it ")
         }
+        Log.d(TAG, "setupObserver: ends")
     }
 
     override fun onAttach(context: Context) {
+        Log.d(TAG, "onAttach: starts")
         super.onAttach(context)
         viewModel.getCharacterList(1)
+        Log.d(TAG, "onAttach: ends")
     }
+
 
 }

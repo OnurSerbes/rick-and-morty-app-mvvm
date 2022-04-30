@@ -17,7 +17,6 @@ class CardFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_card, container, false)
 
-
         return view
     }
 
