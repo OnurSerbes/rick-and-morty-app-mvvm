@@ -27,7 +27,6 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         super.onViewCreated(view, savedInstanceState)
 
         setupRecyclerView()
-        //TODO the problem is in the setupObserver() fix it
         setupObserver()
 
     }
@@ -42,6 +41,8 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     }
 
     private fun setupObserver() {
+        //TODO problem is probably about the query try to fix it
+
         Log.d(TAG, "setupObserver: starts")
         //this code block will add the characters from api to the recyclerView
         viewModel.myResponse.observe(viewLifecycleOwner) {

@@ -1,6 +1,5 @@
 package com.example.rickandmortyapi_kotlin.ui
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,8 @@ import kotlinx.android.synthetic.main.card_item.view.*
 
 class MyAdapter: RecyclerView.Adapter<MyAdapter.ViewHolder>()  {
 
-    private var characterList = emptyList<Character>() //TODO try listOf instead of emptyList
+    private var characterList = emptyList<
+            com.example.rickandmortyapi_kotlin.model.Character>() //TODO try listOf instead of emptyList
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false)

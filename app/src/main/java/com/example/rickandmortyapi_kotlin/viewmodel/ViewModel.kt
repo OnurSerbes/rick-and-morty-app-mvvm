@@ -15,14 +15,14 @@ class ViewModel (private val repository: Repository): ViewModel() {
     fun getCharacterList(page: Int) {
         viewModelScope.launch{
             val response = repository.getCharacterList(page)
-            myResponse.value = response.result
+            myResponse.value = response.results
         }
     }
 
     fun getCharacterByName(name: String){
         viewModelScope.launch{
             val response = repository.getCharactersByName(name)
-            myResponse.value = response.result
+            myResponse.value = response.results
         }
     }
 
