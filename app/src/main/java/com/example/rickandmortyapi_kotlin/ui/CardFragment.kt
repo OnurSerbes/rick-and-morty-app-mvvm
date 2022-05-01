@@ -1,6 +1,7 @@
 package com.example.rickandmortyapi_kotlin.ui
 
 import android.content.ContentValues.TAG
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -28,6 +29,13 @@ class CardFragment : Fragment(R.layout.fragment_card) {
 
     private fun setWidgets() {
         val character = args.character
+        if (character.status == "Alive") {
+            tx_status.setTextColor(Color.GREEN)
+        } else if (character.status == "unknown") {
+            tx_status.setTextColor(Color.MAGENTA)
+        } else (
+                tx_status.setTextColor(Color.RED)
+                )
 
         tx_name.text = character.name
         tx_status.text = character.status

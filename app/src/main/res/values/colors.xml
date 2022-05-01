@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="text_backround">#9000DE5B</color>
+    <color name="border_color">#FF5722</color>
 </resources>

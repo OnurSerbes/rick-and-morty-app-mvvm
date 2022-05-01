@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/onur-/Desktop/Mobile App Projects/RickAndMortyAPIKotlin/app/src/main/res/drawable/card_view_border.xml" value="0.354" />
         <entry key="..\:/Users/onur-/Desktop/Mobile App Projects/RickAndMortyAPIKotlin/app/src/main/res/layout/activity_main.xml" value="0.2702020202020202" />
         <entry key="..\:/Users/onur-/Desktop/Mobile App Projects/RickAndMortyAPIKotlin/app/src/main/res/layout/card_item.xml" value="0.22" />
-        <entry key="..\:/Users/onur-/Desktop/Mobile App Projects/RickAndMortyAPIKotlin/app/src/main/res/layout/fragment_card.xml" value="0.17506631299734748" />
+        <entry key="..\:/Users/onur-/Desktop/Mobile App Projects/RickAndMortyAPIKotlin/app/src/main/res/layout/fragment_card.xml" value="0.33" />
         <entry key="..\:/Users/onur-/Desktop/Mobile App Projects/RickAndMortyAPIKotlin/app/src/main/res/layout/fragment_list.xml" value="0.25" />
         <entry key="..\:/Users/onur-/Desktop/Mobile App Projects/RickAndMortyAPIKotlin/app/src/main/res/layout/fragment_list_fragment.xml" value="0.36666666666666664" />
       </map>
