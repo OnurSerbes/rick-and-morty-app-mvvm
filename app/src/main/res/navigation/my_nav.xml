@@ -22,5 +22,8 @@
         <action
             android:id="@+id/action_cardFragment_to_list_fragment"
             app:destination="@id/list_fragment" />
+        <argument
+            android:name="character"
+            app:argType="com.example.rickandmortyapi_kotlin.model.Character" />
     </fragment>
 </navigation>
