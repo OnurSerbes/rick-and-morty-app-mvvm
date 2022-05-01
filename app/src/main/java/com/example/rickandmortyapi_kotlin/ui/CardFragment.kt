@@ -22,13 +22,17 @@ class CardFragment : Fragment(R.layout.fragment_card) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setWidgets()
+
+    }
+
+    private fun setWidgets() {
         val character = args.character
 
         tx_name.text = character.name
         tx_status.text = character.status
         tx_location.text = character.location.name
         Picasso.get().load(character.image).into(card_image)
-
     }
 
 }

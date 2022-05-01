@@ -26,10 +26,12 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         setupRecyclerView()
         setupObserver()
 
     }
+
 
     private fun setupRecyclerView() {
         Log.d(TAG, "setupRecyclerView: start")

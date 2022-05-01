@@ -33,7 +33,7 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.ViewHolder>()  {
 
         holder.itemView.setOnClickListener { view ->
 
-            //we will use safe args to intent our arguments easily to destination fragment
+            //we will use safe args to pass our arguments easily to destination fragment
             //we need to assign an argument from navigation components
 
             val action = ListFragmentDirections.actionListFragmentToCardFragment(characterList[position])
